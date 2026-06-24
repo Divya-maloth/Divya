@@ -382,17 +382,17 @@ print(tuple(t1))
 #Exercise 11: Function Returning Tuple
 def tup():
     return 10,20,30
-res=tup()
-print(res)
+result=tup()
+print(result)
  
  
 #Exercise 12: Comparing Tuples
 t1=(1,2,3)
 t2=(1,2,3)
 if(t1==t2):
-    print("equal")
+    print("tuples are equal")
 else:
-    print("not equal")
+    print("tuples are not equal")
  
  
 #Exercise 13: Removing Duplicates from Tuple
@@ -402,37 +402,37 @@ print(set(t1))
  
 #Exercise 14: Filter Tuples
 t1=(1,2,3,45,67,89,12)
-res=tuple(filter(lambda x:x%2==0,t1))
+result=tuple(filter(lambda x:x%2==0,t1))
 print(res)
  
  
 #Exercise 15: Map Tuples
 t1=(1,2,3,45,67,89,12)
-res=tuple(map(lambda x:x*2,t1))
-print(res)
+result=tuple(map(lambda x:x*2,t1))
+print(result)
  
  
 #Exercise 16: Modify Tuple
 t1=(1,2,3,4,5)
-res=[]
-m=2
+t2=[]
+modify=2
 for i in t1:
-    if i==m:
-        res.append(20)
+    if i==modify:
+        t2.append(20)
     else:
-        res.append(i)
-print(tuple(res))
+        t2.append(i)
+print(tuple(t2))
  
  
 #Exercise 17: Sort a tuple of tuples by 2nd item
 t=((1,5),(2,4),(3,3),(4,2))
-lst=list(t)
-print(lst)
-for i in range(len(lst)):
-    for j in range(i+1,len(lst)):
-        if(lst[i][1]>lst[j][1]):
-            lst[i],lst[j]=lst[j],lst[i]
-print(tuple(lst))
+li=list(t)
+print(l)
+for i in range(len(li)):
+    for j in range(i+1,len(li)):
+        if(li[i][1]>li[j][1]):
+            li[i],li[j]=li[j],li[i]
+print(tuple(li))
  
  
 #Exercise 18: Count Elements
@@ -441,16 +441,16 @@ cnt=0
 for i in t1:
     cnt=cnt+1
 print(cnt)
-#(or)
+#another way
 t1=(1,2,3,4,1,2,3,5)
 print(t1.count(2))
  
  
 #Exercise 19: Check if all items in the tuple are the same
-t1=(1,2,3,1,2,3)
+t1=(1,1,1) #if we give one element different then tuples are not same
 check=t1[0]
 for i in t1:
-    if i!=check:
+    if i is not check:
         print("items in tuple are not same")
         exit()
 else:
